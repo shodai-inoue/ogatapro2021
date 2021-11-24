@@ -195,7 +195,6 @@ def main():
                 ser.write("channel:2".encode())
                 time.sleep(1)
                 count = 0
-           
 
         elif hand_pose == Pose.THREE:
             count += 1
@@ -246,28 +245,7 @@ def main():
                 time.sleep(1)
                 count = 0
 
-            # hand_landmarks = results.multi_hand_landmarks
-            # Get coordinates
-            # pseudoFixKeyPoint = hand_landmarks[2].x
-            # if hand_landmarks[3].x < pseudoFixKeyPoint and hand_landmarks[4].x < pseudoFixKeyPoint.x:
-            #     thumbIsOpen = True
-
-            # pseudoFixKeyPoint = hand_landmarks[6].y
-            # if hand_landmarks[7].y < pseudoFixKeyPoint and hand_landmarks[8].y < pseudoFixKeyPoint:
-            #     firstFingerIsOpen = True
-
-            # pseudoFixKeyPoint = hand_landmarks[10].y
-            # if hand_landmarks[11].y < pseudoFixKeyPoint and hand_landmarks[12].y < pseudoFixKeyPoint:
-            #     secondFingerIsOpen = True
-
-            # pseudoFixKeyPoint = hand_landmarks[14].y
-            # if hand_landmarks[15].y < pseudoFixKeyPoint and hand_landmarks[16].y < pseudoFixKeyPoint:
-            #     thirdFingerIsOpen = True
-
-            # pseudoFixKeyPoint = hand_landmarks[18].y
-            # if hand_landmarks[19].y < pseudoFixKeyPoint and hand_landmarks[20].y < pseudoFixKeyPoint:
-            #     fourthFingerIsOpen = True
-
+            
         
                 
                 # Visualize angle
@@ -287,37 +265,7 @@ def main():
     cap.release()
     cv.destroyAllWindows()
 
-# def finger_state_func(image, landmarks):
-#     image_width, image_height = image.shape[1], image.shape[0]
 
-#     palm_array = np.empty((0, 2), int)
-
-#     for index, landmark in enumerate(landmarks.landmark):
-#         x = min(int(landmark.x * image_width), image_width - 1)
-#         y = min(int(landmark.y * image_height), image_height - 1)
-
-#         landmark_point = [np.array((x, y))]
-
-#         # Get coordinates
-#         pseudoFixKeyPoint = landmarks[2].x
-#         if landmarks[3].x < pseudoFixKeyPoint and landmarks[4].x < pseudoFixKeyPoint:
-#             thumbIsOpen = True
-
-#         pseudoFixKeyPoint = landmarks[6].y
-#         if landmarks[7].y < pseudoFixKeyPoint and landmarks[8].y < pseudoFixKeyPoint:
-#             firstFingerIsOpen = True
-
-#         pseudoFixKeyPoint = landmarks[10].y
-#         if landmarks[11].y < pseudoFixKeyPoint and landmarks[12].y < pseudoFixKeyPoint:
-#             secondFingerIsOpen = True
-
-#         pseudoFixKeyPoint = landmarks[14].y
-#         if landmarks[15].y < pseudoFixKeyPoint and landmarks[16].y < pseudoFixKeyPoint:
-#             thirdFingerIsOpen = True
-
-#         pseudoFixKeyPoint = landmarks[18].y
-#         if landmarks[19].y < pseudoFixKeyPoint and landmarks[20].y < pseudoFixKeyPoint:
-#             fourthFingerIsOpen = True
 
 
 
