@@ -1,6 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
 /*　------------全体設定------------- */
+header.sitemenu {
+	/* position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	padding: 10px; */
+  background-color: rgba(255,255,255,0.9);
+  /* transition: 0.6s;
+  z-index: 999; */
+} 
+header.sitemenu.hide {
+	transform: translateY(-100%);
+}
+.title {
+  display: flex;
+  overflow: hidden;
+  color: #aa8f7b;
+  font-family: 'Anton', sans-serif;
 
+}
+.title span {
+  display: block;
+  transform: translate(0, 105%);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.title.-visible span {
+  transform: translate(0, 0);
+}
+.title span:nth-child(2) {
+  transition-delay: 0.06s;
+}
+.title span:nth-child(3) {
+  transition-delay: 0.12s;
+}
+.title span:nth-child(4) {
+  transition-delay: 0.18s;
+}
+.title span:nth-child(5) {
+  transition-delay: 0.24s;
+}
+.title span:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.title span:nth-child(7) {
+  transition-delay: 0.36s;
+}
+.title span:nth-child(8) {
+  transition-delay: 0.42s;
+}
+.title span:nth-child(9) {
+  transition-delay: 0.48s;
+}
+.title span:nth-child(10) {
+  transition-delay: 0.54s;
+}
+.title span:nth-child(11) {
+  transition-delay: 0.6s;
+}
+.title span:nth-child(12) {
+  transition-delay: 0.66s;
+}
+.title span:nth-child(13) {
+  transition-delay: 0.72s;
+}
+body {
+  background-color: rgb(246, 225, 200);
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
+/* ------------footer設定--------------- */
+footer {
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid silver;
+  color: white;
+  background-color: rgb(55, 55, 55);
+}
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #3f98ef;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #3f98ef;
+}
+
+/* a.back_to_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+} */
+
+/* ---------モータルウィンドウ-------- */
 .modal-wrapper {
   z-index: 999;
   position: fixed;
@@ -80,77 +213,51 @@
 .modal-wrapper .modal-close:hover {
   color: #2b2e38 !important
 }
-
-
-
-/* ------------footer設定--------------- */
-footer {
-  margin: 0 auto;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid silver;
-  color: white;
-  background-color: rgb(55, 55, 55);
-}
-#page_top{
-  width: 90px;
-  height: 90px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  opacity: 0.6;
-}
-#page_top a{
-  position: relative;
-  display: block;
-  width: 90px;
-  height: 90px;
-  text-decoration: none;
-}
-#page_top a::before{
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f102';
-  font-size: 25px;
-  color: #3f98ef;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  top: -40px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-}
-#page_top a::after{
-  content: 'PAGE TOP';
-  font-size: 13px;
-  color: #fff;
-  position: absolute;
-  top: 45px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  color: #3f98ef;
-}
-
-a.back_to_top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-}
 img.gazou {
   width: 96px;
   height: 65px;
-  }
+ }
 
-  img.gazou2 {
-    width: 500px;
-    height: 400px;
-    }
+img.gazou2 {
+  width: 500px;
+  height: 400px;
+}
+
+.example {
+  position: relative;
+}
+
+.example p {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  margin: 0; 
+  color: white;
+  background: black;
+  font-size: 15px;
+  line-height: 1;
+  padding: 10px;
+}
+
+.example img {
+  width: 200px;
+  height: 200px;
+}
+.example img:hover {
+  opacity: 0.5;
+  background-color: black;
+}
+
+ul{
+   display:flex;
+   flex-wrap:wrap;
+   list-style:none;
+   margin:10;
+   padding:10;
+}
+
+
+
+
+
+
