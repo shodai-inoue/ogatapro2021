@@ -9,4 +9,4 @@
 ### ソフトウェア
 - Python3
 - Media Pipe
-![動作環境](https://user-images.githubusercontent.com/74942763/147567134-36e5f62d-e438-4e97-ad22-db59a3bd3be9.JPG)
+![動作環境](https://user-images.githubusercontent.com/74942763/147567134-36e5f62d-e438-4e97-ad22-db59a3bd3be9.JPG =x300)
